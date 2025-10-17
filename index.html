@@ -19,6 +19,7 @@
 </head>
 
 <body>
+    
     <div id="main">
         <div id="error">
             Tu navegador que estás usando no es compatible con el contenido que se va a mostrar. 
@@ -29,25 +30,45 @@
         <div id="wrap">
             <div id="text">
                 <div id="code">
-                    <span class="say"><strong>Para el amor de mi vida:</strong></span><br>
-                    <span class="say">Si pudiera elegir un lugar seguro, sería a tu lado.</span><br>
-                    <span class="say">No sé en qué momento exacto te volviste tan importante para mí, solo sé que quiero estar a tu lado por siempre. Tu risa me calma, tu voz me llena, y pensarte es mi momento favorito del día. </span>
-                    <span class="say">Gracias por existir y por ser mi lugar favorito en el mundo. </span><br>
+                    <span class="say"><strong>Para Anna, el amor de mi vida:</strong></span><br>
+                    <span class="say">Si pudiera elegir un lugar seguro, sería siempre a tu lado.</span><br>
+                    <span class="say">Quiero que sepas que te amo, y que sin importar donde y como estemos te amo con todo mi ser. Eres todo lo que soñé tener y ahora que lo tengo me siento tan afortunado. No hay palabras para describir lo mucho que te adoro. Eres muy valiosa para mi.</span>
+                    <span class="say">Gracias por aparecer en mi vida, gracias por estos dos meses en donde me has hecho tan feliz. Cerca o lejos, solo tu tienes mi corazon, mis sentimientos y todo mi amor.</span><br>
                     <span class="say"><span class="space"></span> — Con Amor, Kleb</span><br>
-                    <span class="say"><span class="space"></span> PD. Te Amo</span><br><br>
                 </div>
             </div>
             <div id="clock-box">
-                <a href="https://alexxdev.vercel.app/" target="_blank">Mi amor</a>
-                <a href="https://alexxdev.vercel.app/" target="_blank">por ti</a> comenzó hace...
+                <a>Mi amor</a>
+                <a>por ti</a> comenzó hace...
                 <div id="clock"></div>
             </div>
 
             <canvas id="canvas" width="1100" height="680"></canvas>
         </div>
     </div>
+    <audio id="bg-music" autoplay loop>
+        <source src="fondo.mp3" type="audio/mpeg">
+        Tu navegador no soporta el audio.
+    </audio>
 
-    <script src="script.js"></script>
+    <script src="script.js">
+        
+    </script>
+    <script>
+        const music = document.getElementById("bg-music");
+        music.volume = 0;
+        music.play();
+
+        let vol = 0;
+        const fadeIn = setInterval(() => {
+        if (vol < 0.2) {
+            vol += 0.01;
+            music.volume = vol;
+        } else {
+            clearInterval(fadeIn);
+        }
+        }, 200);
+    </script>
 </body>
 
  <!-- 
